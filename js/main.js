@@ -1741,7 +1741,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initialConfig\": () => (/* binding */ initialConfig),\n/* harmony export */   \"initialTime\": () => (/* binding */ initialTime)\n/* harmony export */ });\nconst initialConfig = [\n    { small: 5, big: 10 },\n    { small: 10, big: 20 },\n    { small: 15, big: 30 },\n    { small: 20, big: 40 },\n    { small: 25, big: 50 },\n    { small: 30, big: 60 },\n    { small: 40, big: 80 },\n    { small: 50, big: 100 }\n];\nconst initialTime = '00:20';\n\n\n//# sourceURL=webpack://poker-page/./src/settings.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"initialConfig\": () => (/* binding */ initialConfig),\n/* harmony export */   \"initialTime\": () => (/* binding */ initialTime)\n/* harmony export */ });\nconst initialConfig = [\n    { small: 5, big: 10 },\n    { small: 10, big: 20 },\n    { small: 15, big: 30 },\n    { small: 20, big: 40 },\n    { small: 25, big: 50 },\n    { small: 30, big: 60 },\n    { small: 40, big: 80 },\n    { small: 50, big: 100 }\n];\nconst initialTime = '15:00';\n\n\n//# sourceURL=webpack://poker-page/./src/settings.tsx?");
 
 /***/ }),
 
