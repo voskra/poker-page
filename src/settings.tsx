@@ -9,4 +9,4 @@ export const initialConfig = [
   { small: 50, big: 100 }
 ];
 
-export const initialTime = '00:20';
+export const initialTime = '15:00';
