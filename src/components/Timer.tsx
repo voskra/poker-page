@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Typography, Button } from '@mui/material';
 import { PlayArrow, Pause, Stop } from '@mui/icons-material';
+import { debounce } from '../utils';
 
 interface TimerOwnProps {
   toggleTimer: () => void;
@@ -31,7 +32,7 @@ export const Timer = React.memo<TimerOwnProps>(
           size="large"
           startIcon={startIcon}
           variant="contained"
-          onClick={toggleTimer}
+          onClick={debounce(toggleTimer, 500)}
         >
           {isEnded ? 'STOPPED' : isStarted ? 'PAUSE' : 'PLAY'}
         </Button>

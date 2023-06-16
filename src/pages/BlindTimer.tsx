@@ -20,6 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export const BlindTimer = React.memo(() => {
   const [isTimerStarted, setIsTimerStarted] = React.useState<boolean>(false);
   const [progress, setProgress] = React.useState<number>(0);
+  const [timerAlmostOver, setTimerAlmostOver] = React.useState<boolean>(false);
   const prevTimerStart = React.useRef<boolean>(false);
   const { startTimer, pauseTimer, timer } = useTimer(initialTime);
   const { blinds, endOfBlinds } = useBlinds(timer);
@@ -48,6 +49,7 @@ export const BlindTimer = React.memo(() => {
     const initTotal = +initMinutes * 60 + +initSeconds;
     const total = +minutes * 60 + +seconds;
 
+    setTimerAlmostOver(minutes === '00' && +seconds < 10);
     setProgress(((initTotal - total) / initTotal) * 100);
   }, [timer]);
 
@@ -65,7 +67,12 @@ export const BlindTimer = React.memo(() => {
     >
       <Grid item={true} md={4} xs={2}>
         <Item>
-          <Blinds blinds={blinds} progress={progress} />
+          <Blinds
+            blinds={blinds}
+            isTimerStarted={isTimerStarted}
+            progress={progress}
+            timerAlmostOver={timerAlmostOver}
+          />
         </Item>
       </Grid>
       <Grid item={true} md={8} xs={2}>

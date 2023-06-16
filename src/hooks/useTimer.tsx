@@ -14,6 +14,7 @@ export const useTimer = (time = '00:10'): UseTimerResult => {
   const getTimeRemaining = React.useCallback((date: Date) => {
     const total =
       Date.parse(date.toString()) - Date.parse(new Date().toString());
+
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
 
@@ -55,7 +56,7 @@ export const useTimer = (time = '00:10'): UseTimerResult => {
         changeTimer(date);
       }, 1000);
     },
-    [changeTimer]
+    [changeTimer, time]
   );
 
   const getDeadTime = React.useCallback(
